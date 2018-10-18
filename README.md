@@ -1,25 +1,19 @@
-# OpenSCAD 🚀
+# OpenSCAD intro
 
-## 🐲[What is OpenSCAD](http://spolearninglab.com/curriculum/lessonPlans/hacking/resources/software/3d/openscad_intro.html)
-Its a free open source software to create 3D parts.
-## 🔨 [How does it work](http://spolearninglab.com/curriculum/lessonPlans/hacking/resources/software/3d/openscad_intro.html)
-OpenSCAD is not an interactive modeller. Instead it reads in statements that describes the object and it renders the 3D model from that code.
-## Why OpenSCAD
-- Full control the process and the model,
-- Great maintanance experience.
-- Great for team work and open collaboration
+### 🚀 Download it and try it!
 
-OpenSCAD provides two main modelling techniques:
-Constructive Solid Geometry
-Extrusion of 2D outlines
+- [Download the Snaphsot version of OpenSCAD to work with the customizer.](http://www.openscad.org/downloads.html)
 
+### 👇This one is optional but I recommend it 👌
+- [Download ATOM](https://atom.io/). Work with a powerful text editor like ATOM, is way better and has packages for OpenSCAD language.
+### What is OpenSCAD
+Its a free open source software to create 3D parts.[Read more...](http://spolearninglab.com/curriculum/lessonPlans/hacking/resources/software/3d/openscad_intro.html)
+### How OpenSCAD works
+OpenSCAD is not an interactive modeller. Instead it reads in statements that describes the object and it renders the 3D model from that code.[Readmore](http://spolearninglab.com/curriculum/lessonPlans/hacking/resources/software/3d/openscad_intro.html)
 
-# Customizable modeling with OpenSCAD
+### Why OpenSCAD
+- No need to pay expensive licenses.
+- Models are easier to maintain and customize compared to available interactive modellers like Inventor, or Solidworks
 
-Customizer is a simple way to make customized 3D Things that you can share, download and print! Customizer allows you to design parametric objects that can be customized with an easy web interface. You create your customizer files with OpenSCAD. To share your own file, upload your OpenSCAD script to Thingiverse and tag your Thing with the customizer tag.
-
-
-
-
-Further reading to use the customizer:
-http://spolearninglab.com/curriculum/lessonPlans/hacking/resources/software/3d/openscad/openscad_customizer_01.html
+## 👇 Look at this awesome example!!!
+![Grapples](Models/Grapples/param_model_2.gif)
