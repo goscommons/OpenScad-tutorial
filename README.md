@@ -14,9 +14,9 @@ Download the repository, it has all the materials you need to learn the basics o
 OpenScad-tutorial
 |
 └── Examples
-		|
-		└── Grapples
-		└── Plug		
+	|
+	└── Grapples
+	└── Plug		
 └── Exercise
 |
 └── MCAD-master
@@ -26,7 +26,7 @@ OpenScad-tutorial
 
 ```
 #### Exercise 📂
-Contains reference images to get you started and inspired. 
+Contains reference images to get you started and inspired.
 
 #### Examples 📂
 Contains reference models and examples to get you inspired.
