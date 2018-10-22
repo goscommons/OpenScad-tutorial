@@ -5,9 +5,9 @@ Download the repository, it has all the materials you need to learn the basics o
 ### Use the Readmes 📖
 * ```01_Intro.md``` A very basic [introduction to openscad](01_Intro.md)
 
-* ```02_Excercise.md```Make tour own chivichana design with openscad
+* ```02_Exercise.md``` [Tips to make your own chivichana](02_Exercise) design with openscad.
 
-* Step by step guide ```03_Tutorial.md```
+* [Step by step guide](03_Tutorial_Resources) ```03_Tutorial_Resources.md```
 
 ## Folder Structure
 ```
@@ -25,11 +25,11 @@ OpenScad-tutorial
 03_Micro_Tutorials.md
 
 ```
-#### Exercise:
-Contains reference images and detailed description of the design goals and
+#### Exercise 📂
+Contains reference images to get you started and inspired. 
 
-#### Examples:
-Contains models
+#### Examples 📂
+Contains reference models and examples to get you inspired.
 
-#### MCAD-master:
-A library of parts made by
+#### MCAD-master 📂
+An open source library of parts that you can use for your one designs. Contains customizable gears, bearings, and more.
