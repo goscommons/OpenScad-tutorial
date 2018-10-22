@@ -16,6 +16,6 @@ OpenSCAD is not an interactive modeller. Instead it reads in statements that des
 - Models are easier to maintain and customize compared to available interactive modellers like Inventor, or Solidworks
 
 ## 👇 Look at this awesome example!!!
-![Grapples](Models/Grapples/param_model_2.gif)
+![Grapples](Examples/Grapples/param_model_2.gif)
 
 ## 👉 [Lets get started with open scad ](01_The_Basics.md)😎
