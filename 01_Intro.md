@@ -17,5 +17,3 @@ OpenSCAD is not an interactive modeller. Instead it reads in statements that des
 
 ## 👇 Look at this awesome example!!!
 ![Grapples](Examples/Grapples/param_model_2.gif)
-
-## 👉 [Lets get started with open scad ](01_The_Basics.md)😎
