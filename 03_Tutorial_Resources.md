@@ -8,6 +8,7 @@
 #### 🔨 Essential tools
 - [OpenSCAD cheat sheet](http://www.openscad.org/cheatsheet/)
 Just copy and paste code, learn by trying the examples and changing parameters.
+- OpenSCAD examples ➡️ Go to your openscad installation files and explore the examples provided.
 
 ### Second part: advanced design with openscad
 - Reusing part libraries

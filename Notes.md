@@ -7,7 +7,7 @@ Small Activity System:
 
 - Tasks, Goals, Operations
 
-### Goals:
+### Tasks:
 1. Make a parametric frame design
 2. Use library parts (Customize Bearings for back)
 3. Share designs in Github issues?
