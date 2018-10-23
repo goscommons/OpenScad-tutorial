@@ -28,9 +28,8 @@ module test_bearing_hole(){
 BEARING_INNER_DIAMETER = 0;
 BEARING_OUTER_DIAMETER = 1;
 BEARING_WIDTH = 2;
-a=2;
-b=2;
-c=1;
+
+
 // Common bearing names
 SkateBearing = 608;
 
@@ -52,7 +51,7 @@ function bearingInnerDiameter(model) = bearingDimensions(model)[BEARING_INNER_DI
 function bearingOuterDiameter(model) = bearingDimensions(model)[BEARING_OUTER_DIAMETER];
 
 module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
-                material=Steel, sideMaterial=Brass, a=a, b=b, c=c) {
+                material=Steel, sideMaterial=Brass){
   // Common bearing names
 	model =
     model == "Skate" ? 608 :
@@ -95,7 +94,3 @@ module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
   }
 
 }
-
-bearing(model="custom", a==6, b==18, c==5);
-translate([30,0,0])
-bearing(model=623);
