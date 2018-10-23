@@ -19,10 +19,10 @@ This repo is intended to introduce people to openscad with through a practical e
 OpenScad-tutorial
 	|
 	└── Examples
-		|
-		└── Cylinders
-		└── Grapples
-		└── Plug
+	|	|
+  |	└── Cylinders
+	|	└── Grapples
+	|	└── Plug
 	└── Exercise
 		|
 		└── MCAD-master
