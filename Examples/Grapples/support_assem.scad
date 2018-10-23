@@ -8,12 +8,12 @@ integrated with the squares
 
 // INDEPENDENT VARIABLES
 /* Tynes Subassemblies parameters*/
-l=1700;// width of grapples
+l=1600;// width of grapples
 tynes_num=10;//ammmount of inner tynes
 sh_thick=5; // Sheet thickness
 
 /*Lid Parameters*/
-l_lid=620;
+l_lid=320;
 
 // DEPENDENT VARIABLES**DON'T CHANGE**
 d_b_tynes=l/tynes_num;// distance between tynes recalculation
@@ -35,12 +35,12 @@ module sq_tube(length,size){
 module support_assem() {
 	translate([0,0,37])
 	rotate([0, 0, 0]) {
-		translate([sh_thick*2+l/2,0,400])
+		translate([l/2-sh_thick/2,0,400])
 		rotate([0,0,0])
 		color("blue")
 		sq_tube(l,3);
 
-		translate([sh_thick*2+l/2,0,0])
+		translate([sh_thick-sh_thick/2+l/2,0,0])
 		rotate([0,0,0])
 		color("yellow")
 		sq_tube(l,3);
@@ -60,8 +60,8 @@ module support_assem() {
 
 	}
 
-	translate([0,15,-20]){
-		rotate([0,0,0]){
+	/* translate([0,15,-20]){} */
+module hinches(){
 						color("green"){
 						translate([l/4-l_lid/2,-55,420])
 						hinch();
@@ -70,18 +70,25 @@ module support_assem() {
 						translate([l/4,-55,420])
 						mount_cylinder();
 					}
-					translate([l/3.75+l_lid/2,74,540])
+
+					translate([l/4+l_lid/2,74,540])
 					rotate([90,0,90])
 					tube(15,sh_thick*2+sh_thick*0.5,5);
 
-					translate([l/3.75-l_lid/2,74,540])
+					translate([l/4-l_lid/2,74,540])
 					rotate([90,0,90])
 					tube(15,sh_thick*2+sh_thick*0.5,5);
+				}
+
+translate([0, 20, -22]) {
+	hinches();
+	translate([l,0,0])
+	mirror(){
+		hinches();
 		}
 	}
-
-
 }
+
 
 module tube(r,lng,th){
 	difference(){
@@ -92,11 +99,9 @@ module tube(r,lng,th){
 
 module ssqa(){
 	module base_part(){
-		module triangle(o_len, a_len, depth, center=false)
-		{
+		module triangle(o_len, a_len, depth, center=false){
 			centroid = center ? [-a_len/3, -o_len/3, -depth/2] : [0, 0, 0];
-			translate(centroid) linear_extrude(height=depth)
-			{
+			translate(centroid) linear_extrude(height=depth){
 				polygon(points=[[0,0],[a_len,0],[0,o_len]], paths=[[0,1,2]]);
 			}
 		}
@@ -107,28 +112,17 @@ module ssqa(){
 		triangle(cb_l-cb_h,cb_l,sh_thick, false);
 		cube([cb_l,cb_h,sh_thick], center=false);
 	}
-	color("red")
-	translate([0,15,-165]){
-		rotate([-30, 0, 0]){
-			difference() {
-				cube(size=[d_b_bar+d_b_bar*0.2,60,sh_thick], center=true);
-				translate([0,-30,0])
-				cube(size=[100, 50, 50], center=true);
-			}
-		}
-	}
-
 
 	color("red") {
 		translate([0,16,220])
 		rotate([-45, 0, 0])
 		union(){
-			translate([d_b_bar/2.6,0,0])
 			cube(size=[l_lid+l_lid*0.05,75,sh_thick], center=true);
 		}
 	}
 
-	translate([0,0,25]){
+translate([-l_lid/4,0,0]){
+	translate([0,0,25])
 	union(){
 		translate([-d_b_bar/2-sh_thick/2,-10,-225])
 		rotate([90,0,90])
@@ -146,22 +140,32 @@ module ssqa(){
 		rotate([0, 90, 0])
 		cube(size=[h_bar,20,sh_thick], center=true);
 	}
+		color("red")
+		translate([0,15,-165]){
+			rotate([-30, 0, 0]){
+				difference() {
+					cube(size=[d_b_bar+d_b_bar*0.2,60,sh_thick], center=true);
+					translate([0,-30,0])
+					cube(size=[100, 50, 50], center=true);
+				}
+			}
+		}
+
 }
+
 }
 
 translate([-l/2, 0, 0])
 support_assem();
 
-translate([l/3, 0, 0])
-/* translate([l/3,-50,200]) */
+translate([0,-45,200]){
+translate([l/4,0,0])
 rotate([0, 0, 180])
 ssqa();
 
 mirror(){
-translate([l/3,0,0])
-/* translate([l/5,-50,200]) */
+translate([l/4,0,0])
 rotate([0, 0, 180])
 ssqa();
+	}
 }
-
-cylinder(r=10, h=10, center=true);
