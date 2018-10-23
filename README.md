@@ -17,12 +17,13 @@ This repo is intended to introduce people to openscad with through a practical e
 ## Folder Structure
 ```
 OpenScad-tutorial
+	|
+	└── Examples
 		|
-		└── Examples
-			|
-			└── Grapples
-			└── Plug		
-		└── Exercise
+		└── Cylinders
+		└── Grapples
+		└── Plug
+	└── Exercise
 		|
 		└── MCAD-master
 		01_Intro.md
