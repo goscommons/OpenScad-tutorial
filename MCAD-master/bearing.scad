@@ -30,16 +30,16 @@ BEARING_INNER_DIAMETER = 0;
 BEARING_OUTER_DIAMETER = 1;
 BEARING_WIDTH = 2;
 custom=false;
-a=8;
-b=22;
-c=7;
+inD=8;
+outD=22;
+bW=7;
 
 
 // Common bearing names
 SkateBearing = 608;
 
 module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
-	material=Steel, sideMaterial=Brass, custom=custom, a=a,b=b,c=c){
+	material=Steel, sideMaterial=Brass, custom=custom, inD=inD,outD=outD,bW=bW){
 
 
 function bearingDimensions(model) =
@@ -49,7 +49,7 @@ model == 624 ? [4*mm, 13*mm, 5*mm]:
 model == 627 ? [7*mm, 22*mm, 7*mm]:
 model == 688 ? [8*mm, 16*mm, 4*mm]:
 model == 698 ? [8*mm, 19*mm, 6*mm]:
-model == "custom" ? [a,b,c]:
+model == "custom" ? [inD,outD,bW]:
 [8*mm, 22*mm, 7*mm]; // this is the default
 
 
@@ -124,7 +124,3 @@ function bearingOuterDiameter(model) = bearingDimensions(model)[BEARING_OUTER_DI
 		}
 
 	}
-
-bearing(model=623);
-translate([25,0,0])
-bearing(model="custom", a=8,b=19,c=15);
