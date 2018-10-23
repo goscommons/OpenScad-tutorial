@@ -29,6 +29,7 @@ BEARING_INNER_DIAMETER = 0;
 BEARING_OUTER_DIAMETER = 1;
 BEARING_WIDTH = 2;
 
+
 // Common bearing names
 SkateBearing = 608;
 
@@ -41,6 +42,7 @@ function bearingDimensions(model) =
   model == 627 ? [7*mm, 22*mm, 7*mm]:
   model == 688 ? [8*mm, 16*mm, 4*mm]:
   model == 698 ? [8*mm, 19*mm, 6*mm]:
+	model == "custom" ? [a*mm,b*mm,c*mm]:
   [8*mm, 22*mm, 7*mm]; // this is the default
 
 
@@ -49,9 +51,9 @@ function bearingInnerDiameter(model) = bearingDimensions(model)[BEARING_INNER_DI
 function bearingOuterDiameter(model) = bearingDimensions(model)[BEARING_OUTER_DIAMETER];
 
 module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
-                material=Steel, sideMaterial=Brass) {
+                material=Steel, sideMaterial=Brass){
   // Common bearing names
-  model =
+	model =
     model == "Skate" ? 608 :
     model;
 
@@ -65,9 +67,10 @@ module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
 
   translate(pos) rotate(angle) union() {
     color(material)
+		translate([0,0,-w/2])
       difference() {
         // Basic ring
-        Ring([0,0,0], outerD, innerD, w, material, material);
+				Ring([0,0,0], outerD, innerD, w, material, material);
 
         if (outline==false) {
           // Side shields
@@ -81,6 +84,7 @@ module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
     color(material) {
       translate(pos)
         difference() {
+					/* translate([0,0,-w/2]) */
           cylinder(r=od/2, h=h,  $fs = 0.01);
           color(holeMaterial)
             translate([0,0,-10*epsilon])
@@ -90,5 +94,3 @@ module bearing(pos=[0,0,0], angle=[0,0,0], model=SkateBearing, outline=false,
   }
 
 }
-
-
