@@ -15,8 +15,13 @@ rotate([0,0,30]){
 	translate([-200,0,0]){
 		rotate([0,90,0]){
 		cube([15,15,400], center=true);
-		bearing(pos=[0,0,-10], angle=[0,0,0], model="myModel", outline=false,
-		                material=Steel, sideMaterial=Brass);
+		bearing(pos=[0,0,-10], angle=[0,0,0],
+			model="custom",
+			inD=20,
+			outD=40,
+			bW=18
+		)
+			;
 
 									}
 	}
