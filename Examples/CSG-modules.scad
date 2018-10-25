@@ -27,7 +27,7 @@ module body() {
 }
 
 module intersector() {
-    color("Red") cube(15, center=true);
+    color("yellow") cube(15, center=true);
 }
 
 module holeObject() {

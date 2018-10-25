@@ -34,7 +34,7 @@ Hole_Radius = 20;
 Hole_Facets = 6;
 
 //Type of hole
-Hole_Type = "userdef"; // [circle,square,userdef]
+Hole_Type = "square"; // [circle,square,userdef]
 
 //Definition of the entire model
 Definition = 100;
