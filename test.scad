@@ -11,7 +11,7 @@ use <MCAD-master/bearing.scad>
 gear(25,100,50,30,0);*/
 
 /* test_gears(); */
-rotate([0,0,30]){
+/* rotate([0,0,30]){
 	translate([-200,0,0]){
 		rotate([0,90,0]){
 		cube([15,15,400], center=true);
@@ -25,6 +25,9 @@ rotate([0,0,30]){
 
 									}
 	}
-}
+} */
 /* translate([2,0,0])
 gear(25,10,50,20,0); */
+translate([40,0,0])
+bearing(model="custom", inD=18, outD=30, bW=14);
+bearing(model="custom", inD=20, outD=40, bW=18);

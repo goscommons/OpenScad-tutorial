@@ -1,5 +1,5 @@
 // ************* Credits part *************
-// "Grapples customizable design " 
+// "Grapples customizable design "
 // Programmed by Jose Carlos Urra  - September 2018
 // Grapples design by Manolis Karamousas
 //
@@ -15,12 +15,12 @@
 // ************* Declaration part *************
 // INDEPENDENT VARIABLES
 /* Tynes Subassemblies parameters*/
-l=1600;// width of grapples
-tynes_num=10;//ammmount of inner tynes
-sh_thick=10; // Sheet thickness
+l=1300;// width of grapples
+tynes_num=5;//ammmount of inner tynes
+sh_thick=7; // Sheet thickness
 
 /*Lid Parameters*/
-l_lid=680;
+l_lid=380;
 
 
 // DEPENDENT VARIABLES**DON'T CHANGE**
@@ -31,7 +31,7 @@ d_b_bar=l_lid/2;
 h_bar=450;
 
 module tynes(){
-	color("red"){
+	color("purple"){
 		translate([-sh_thick,0,0])rotate([0,90,0])linear_extrude(center=true,  height = sh_thick)import (file = "ingussets.dxf");
 
 	}
