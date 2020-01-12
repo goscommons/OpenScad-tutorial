@@ -10,9 +10,9 @@ This repo is intended to introduce people to openscad with through a practical e
 ### Use the Readmes 📖
 * ```01_Intro.md``` A very basic [introduction to what is openscad](01_Intro.md)
 
-* ```02_Exercise.md``` [mini project description](02_Exercise)
+* ```02_Exercise.md``` [mini project description](02_Exercise.md)
 
-* ```03_Tutorial_Resources.md``` [Step by step guide to start *openscading*](03_Tutorial_Resources)
+* ```03_Tutorial_Resources.md``` [Step by step guide to start *openscading*](03_Tutorial_Resources.md)
 
 ## Folder Structure
 ```
